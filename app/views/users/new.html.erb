@@ -1,11 +1,30 @@
 <h1>Signup!</h1>
 
+<div class="row alert alert-info">
 <%= form_for :user, url: '/users' do |f| %>
+  <div class="form-group">
+    Name: <br>
+    <%= f.text_field :name %>
+  </div>
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
+  <div class="form-group">
+    Email: <br>
+    <%= f.text_field :email %>
+  </div>
+  
+  <div class="form-group">
+    Password: <br>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="form-group">
+    Password Confirmation: <br>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.submit "Submit", class:"btn btn-primary" %>
+  </div>
 
 <% end %>
+</div>
