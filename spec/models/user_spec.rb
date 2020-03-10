@@ -6,14 +6,29 @@ RSpec.describe User, type: :model do
   }
 
   describe 'Validations' do
-    it 'Has a valid name' do
+    it 'Has a valid user' do
       expect(subject).to be_valid
     end
 
-    it 'Has a password' do
+    it 'is not a valid password' do
       subject.password = nil
       expect(subject).to_not be_valid
     end
+
+    it 'does not save without unique email' do
+      subject.email = 'HOHO@mail.com'
+      expect(subject).to_not be_valid
+    end
     
+    it 'has a name' do
+      subject.name = nil
+      expect(subject).to_not be_valid
+    end
+
+    it 'has is not a valid password length' do
+      subject.password = 'hi'
+      expect(subject).to_not be_valid
+    end
   end
 end
+
