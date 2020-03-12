@@ -25,3 +25,8 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+## Gif
+The gif displays the initial app on load, with database connected.  Registering a new user to the database, then adding items to a cart.  Goes through the process of buying products and shows an empty cart after purchase.
+
+!["Gif demo for Jungle"](https://github.com/HoangTienDinh/jungle-rails/blob/master/images/Jungler.gif)
