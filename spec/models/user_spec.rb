@@ -14,11 +14,6 @@ RSpec.describe User, type: :model do
       subject.password = nil
       expect(subject).to_not be_valid
     end
-
-    it 'does not save without unique email' do
-      subject.email = 'HOHO@mail.com'
-      expect(subject).to_not be_valid
-    end
     
     it 'has a name' do
       subject.name = nil
